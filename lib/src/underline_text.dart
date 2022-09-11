@@ -1,11 +1,9 @@
-
 part of underline_text;
 
 class UnderlineText extends StatelessWidget {
   final String text;
   final UnderlineTextStyle? style;
-  const UnderlineText({Key? key, this.style, required this.text})
-      : super(key: key);
+  const UnderlineText({Key? key, this.style, required this.text}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -31,6 +29,8 @@ class UnderlineText extends StatelessWidget {
         decoration: TextDecoration.underline,
         decorationThickness: style?.lineHeight ?? 3,
         decorationStyle: style?.lineStyle ?? TextDecorationStyle.solid,
+        fontFamily: style?.fontFamily,
+        overflow: style?.overflow,
       ),
     );
   }
